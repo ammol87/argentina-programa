@@ -1,6 +1,5 @@
 //Tomar datos por api. Esta implementacion devuelve 1 resultado random
 //solo informacion genero, nombre, ubicacion, email, foto y celular.
-
 fetch('https://randomuser.me/api/?inc=gender,name,location,email,cell,picture')
   .then((response) => response.json())
   .then((data) => {
@@ -14,6 +13,16 @@ fetch('https://randomuser.me/api/?inc=gender,name,location,email,cell,picture')
 
         //Establecemos genero
         document.getElementById("genero").innerHTML = persona.gender;
+        
+        //Cambio colores según genero de CV
+        if(persona.gender == "female")
+        {
+              document.getElementById("bodyColor").style.backgroundColor = "lightgoldenrodyellow";
+              let elements = document.getElementsByClassName("spanResult");
+              for (var i = 0 ; i < elements.length; i++) {
+                      elements[i].style.backgroundColor = "lightcoral"; 
+              };
+        }
 
         //Establecemos email
         document.getElementById("email").innerHTML = persona.email;
@@ -37,15 +46,16 @@ for (var i = 0 ; i < elements.length; i++) {
    };
 
 function click(){
+        let html_dinamico = "";
         if(this.id == "tecnologia" || this.id == "cursos")
         {
                 document.getElementById("exp_descripcion").className = "card invisible";
                 document.getElementById("puesto").innerHTML = "";
-                document.getElementById("habilidades_descripcion").className = "card visible";
+                document.getElementById("habilidades_descripcion").className = "card visible; divCards";
         }
         else
         {
-                document.getElementById("exp_descripcion").className = "card visible";
+                document.getElementById("exp_descripcion").className = "card visible; divCards";
                 document.getElementById("habilidades_descripcion").className = "card invisible";
                 document.getElementById("habilidades").innerHTML = "";
         }
@@ -67,11 +77,18 @@ function click(){
                 break;
 
                 case "tecnologia":
-                        document.getElementById("habilidades").innerHTML = "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem";
+                        //se podría obtener datos de algún reservorio e iterar para armar la lista
+                        html_dinamico = "<ul><li>Neque</li><li>dolorem</li><li>ipsum</li></ul>";
+                        document.getElementById("habilidades").innerHTML = html_dinamico;
                 break;
 
                 case "cursos":
-                        document.getElementById("habilidades").innerHTML = "Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo.";
+                        //se podría obtener datos de algún reservorio e iterar para armar la lista
+                        html_dinamico = "<ol><li>voluptatem</li><li>accusantium</li><li>perspiciatis</li></ol>";
+                        document.getElementById("habilidades").innerHTML = html_dinamico;
                 break;
         }
   }
+
+ 
+

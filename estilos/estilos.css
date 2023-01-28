@@ -12,3 +12,19 @@ span
 {
     font-family: 'Roboto', sans-serif;
 }
+
+button
+{
+    padding: auto;
+}
+
+.divCards
+{
+    margin: 4px;
+    background-color: beige;
+}
+
+body
+{
+    background-color: gainsboro;
+}

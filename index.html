@@ -7,14 +7,14 @@
     <!--Estilos del cv -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="estilos/estilos.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
+    <!-- <link rel="stylesheet" href="https://kit.fontawesome.com/6c05f74c96.css" crossorigin="anonymous"> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://kit.fontawesome.com/fe03641e90.css" crossorigin="anonymous">
 
     <title>Proyecto Argentina Programa - CV</title>
 </head>
-<body>
+<body id="bodyColor">
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-8 center">
@@ -29,50 +29,57 @@
     </div>
     <div class="container-fluid">
         <div class="row">
-        <div class="col-md-4 boder">
-            <h4>Datos</h4>
-            <div>
-                <span>Nombre: </span><span id="nombre" class="spanResult"></span>
+            <div class="col-md-4 boder">
+                <h4>Datos <span class="fa-solid fa-address-card fa-spin"></span> </h4>          
+                <div>
+                    <span>Nombre: </span>
+                    <span id="nombre" class="spanResult"></span>
+                </div>
+                <div>
+                    <span>Apellido: </span>
+                    <span id="apellido" class="spanResult"></span>
+                </div>
+                <div>
+                    <span>Género: </span>
+                    <span id="genero" class="spanResult"></span>
+                </div>
+                <div>
+                    <span class="fa-solid fa-envelope fa-bounce"></span>
+                    <span id="email" class="spanResult"></span>
+                </div>
+                <div>
+                    <span class="fa-solid fa-phone fa-shake"></span>
+                    <span id="contacto" class="spanResult"></span>
+                </div>
+                <div>
+                    <span class="fa-solid fa-location-dot fa-flip"></span>
+                    <span id="direccion" class="spanResult"></span>
+                </div>
             </div>
-            <div>
-                <span>Apellido: </span><span id="apellido" class="spanResult"></span>
-            </div>
-            <div>
-                <span>Género: </span><span id="genero" class="spanResult"></span>
-            </div>
-            <div>
-                <span>E-Mail: </span><span id="email" class="spanResult"></span>
-            </div>
-            <div>
-                <span>Dirección: </span><span id="direccion" class="spanResult"></span>
-            </div>
-            <div>
-                <i class="fa-solid fa-phone"></i><span id="contacto" class="spanResult"></span>
-            </div>
-        </div>
     
-        <div class="col-md-8">
-            <h4>Experiencia</h4>
-            <div>
-                <button id="2022" class="btn btn-primary" onclick="">2022-2019</button>
-                <button id="2019" class="btn btn-primary" onclick="">2019-2018</button>
-                <button id="2018" class="btn btn-primary" onclick="">2018-2011</button>
-                <button id="2011" class="btn btn-primary" onclick="">2011-2009</button> 
-            </div>    
-            <div id="exp_descripcion" class="card invisible">
-                <p id="puesto"></p>
-            </div>            
-            <h4>Habilidades</h4>
-            <div>
-                <button id="tecnologia" class="btn btn-primary">Tecnología</button>
-                <button id="cursos" class="btn btn-primary">Cursos y Certificaciones</button>
-            </div>     
-            <div id="habilidades_descripcion" class="card invisible">
-                <p id="habilidades">descripción del botón pulsado</p>
+            <div class="col-md-8">
+                <h4>Experiencia</h4>
+                <div>
+                    <button id="2022" class="btn btn-primary" onclick="">2022-2019</button>
+                    <button id="2019" class="btn btn-primary" onclick="">2019-2018</button>
+                    <button id="2018" class="btn btn-primary" onclick="">2018-2011</button>
+                    <button id="2011" class="btn btn-primary" onclick="">2011-2009</button> 
+                </div>    
+                <div id="exp_descripcion" class="card invisible">
+                    <p id="puesto"></p>
+                </div>            
+                <h4>Habilidades</h4>
+                <div>
+                    <button id="tecnologia" class="btn btn-primary">Tecnología</button>
+                    <button id="cursos" class="btn btn-primary">Cursos y Certificaciones</button>
+                </div> 
+                <div id="habilidades_descripcion" class="card invisible">
+                    <p id="habilidades">descripción del botón pulsado</p>
+                </div>
             </div>
         </div>
     </div>
-    </div>
-    <script src="js/javascript.js"> </script>  
+    <script src="js/javascript.js"> </script> 
+    <script src="https://kit.fontawesome.com/6c05f74c96.js" crossorigin="anonymous"></script> 
 </body>
 </html>
