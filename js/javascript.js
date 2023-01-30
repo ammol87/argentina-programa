@@ -5,6 +5,7 @@ fetch('https://randomuser.me/api/?inc=gender,name,location,email,cell,picture')
   .then((data) => {
     for (const persona of data.results) {
         
+
         //Establecemos nombre
         document.getElementById("nombre").innerHTML = persona.name.first;
 
@@ -39,14 +40,16 @@ fetch('https://randomuser.me/api/?inc=gender,name,location,email,cell,picture')
         }
   });
 
+
 //Funcion click para botones por clase
+let html_dinamico = "";
 let elements = document.getElementsByClassName("btn btn-primary");
 for (var i = 0 ; i < elements.length; i++) {
       elements[i].addEventListener('click' , click , false ) ; 
    };
 
 function click(){
-        let html_dinamico = "";
+        
         if(this.id == "tecnologia" || this.id == "cursos")
         {
                 document.getElementById("exp_descripcion").className = "card invisible";
@@ -90,5 +93,4 @@ function click(){
         }
   }
 
- 
 
