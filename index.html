@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto CV</title>
+    <!-- Hoja de estilos propia-->
+    <link rel="stylesheet" href="css/estilos.css">
+
+    <!-- Iconos de fontawesome.com-->
+    <script src="https://kit.fontawesome.com/fb219c69e3.js" crossorigin="anonymous"></script>
+    <!-- Importo la biblioteca jquery de google para trabajar con https://randomuser.me/ -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+    <!-- Fuentes "ROBOTO" y "OPEN SANS" de https://fonts.google.com/ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:ital,wght@1,700&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="imagenes/icono de pagina.png">
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://github.com/ammol87/argentina-programa">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Proyecto CV">
+    <meta property="og:description" content="CV proyecto final">
+    <meta property="og:image" content="">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="ammol87.github.io">
+    <meta property="twitter:url" content="https://github.com/ammol87/argentina-programa">
+    <meta name="twitter:title" content="Proyecto CV">
+    <meta name="twitter:description" content="CV proyecto final">
+    <meta name="twitter:image" content="">
+
+    
+</head>
+
+<body>
+    <div id="pagina">
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="#titInfoPersonal">INFORMACIÓN PERSONAL Y DE CONTACTO</a></li>
+                    <li><a href="#titExpLab">EXPERIENCIA LABORAL</a></li>
+                    <li><a href="#titExpLab">ESTUDIOS ACADÉMICOS</a></li>
+                    <li><a href="#titCompetencias">COMPETENCIAS</a></li>
+                    <li><a href="#titCursos">CAPACITACIONES</a></li>
+                    <li><a href="#titContactar">CONTACTAR</a></li>
+                </ul>
+            </nav>
+
+            <section id="encabezado" class="encabezado">
+                <article id="perfil">
+                    <figure id="foto">
+                        <img src="" alt="Foto de perfil" id="fotoPerfil" />
+                    </figure>
+                </article>
+                <aside class="nombreTitulo">
+                        <h1 class="nombreTitulo" id="apellidoPersona"></h1>
+                        <h1 class="nombreTitulo" id="nombrePersona"></h1>
+                        <h2 class="nombreTitulo" id="profesionPersona">CEO</h2>
+                </aside>
+            </section>
+        </header>
+
+        <main id="cuerpo">
+            <section id="info" class="tematica">
+                <article id="titInfoPersonal" class="titulo">
+                    <i class="fa-solid fa-address-card iconoTitulo"></i>
+                    <h3>INFORMACIÓN PERSONAL Y DE CONTACTO</h3>
+                    <div class="fleVisibilidad" id="mostrarInfo">
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="fleVisibilidad" id="ocultarInfo">
+                        <i class="fa-solid fa-chevron-up"></i>
+                    </div>
+                </article>
+                <article class="datosLeft">
+                    <table>
+                        <tr>
+                            <td>                        
+                                <p><span class="resaltar">Identificacion:</span> <span id="identificacionPersona"></span></p>
+                                <p><span class="resaltar">Fecha de nacimiento:</span> <span id="nacimientoPersona"></span></p>
+                                <p><span class="resaltar">Residencia:</span> <span id="residenciaPersona"></span></p>
+                                <p><span class="resaltar">Calle:</span> <span id="callePersona"></span></p>
+                                <p><span class="resaltar">Código postal:</span> <span id="codPostPersona"></p>
+                            </td>
+                            <td>   
+                                <p><span class="resaltar">Zona horaria:</span> <span id="zonaHorariaPersona"></span></p>
+                                <p><span class="resaltar">Correo electrónico:</span> <span id="correoElectPersona"></span></p>
+                                <p><span class="resaltar">Teléfono móvil:</span> <span id="telMovilPersona"></span></p>
+                                <p><span class="resaltar">Teléfono fijo:</span> <span id="telFijoPersona"></span></p>
+                            </td>
+                        </tr>
+                    </table>
+                </article>
+            </section>
+
+            <section id="expLab" class="tematica">
+                <article id="titExpLab" class="titulo">
+                    <i class="fa-solid fa-briefcase iconoTitulo"></i>
+                    <h3>EXPERIENCIA LABORAL</h3>
+                    <div class="fleVisibilidad" id="mostrarExpLab">
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="fleVisibilidad" id="ocultarExpLab">
+                        <i class="fa-solid fa-chevron-up"></i>
+                    </div>
+                </article>
+                <article>
+                    <ul class="datos">
+                        <li>
+                            <p><span class="resaltar">2020 - actualidad:</span> CEO supermercado</p>
+                        </li>
+                        <li>
+                            <p><span class="resaltar">1990 - 2020:</span> atención al cliente en supermercado</p>
+                        </li>
+                    </ul>
+                </article>
+            </section>
+
+            <section id="estudios" class="tematica">
+                <article id="titEstudios" class="titulo">
+                    <i class="fa-solid fa-graduation-cap iconoTitulo"></i>
+                    <h3>ESTUDIOS ACADÉMICOS</h3>
+                    <div class="fleVisibilidad" id="mostrarEstudios">
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="fleVisibilidad" id="ocultarEstudios">
+                        <i class="fa-solid fa-chevron-up"></i>
+                    </div>
+                </article>
+                <article class="datos">
+                    <ul>
+                        <li>
+                            <p><span class="resaltar">Administración de empresas:</span> Recibido</p>
+                        </li>
+                        <li>
+                            <p><span class="resaltar">Secundario:</span> Completo</p>
+                        </li>
+                        <li>
+                            <p><span class="resaltar">Primario:</span> Completo</p>
+                        </li>
+                    </ul>
+                </article>
+            </section>
+
+            <section id="competencias" class="tematica">
+                <article id="titCompetencias" class="titulo">
+                    <i class="fa-solid fa-laptop-code iconoTitulo"></i>
+                    <h3>COMPETENCIAS</h3>
+                    <div class="fleVisibilidad" id="mostrarComp">
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="fleVisibilidad" id="ocultarComp">
+                        <i class="fa-solid fa-chevron-up"></i>
+                    </div>
+                </article>
+                <article class="datos">
+                    <p>Management: <progress class="barraProgreso" max="100" value="99"></progress></p>
+                    <p>HTML: <progress class="barraProgreso" max="100" value="65"></progress></p>
+                    <p>JS: <progress class="barraProgreso" max="100" value="24"></progress></p>
+                </article>
+            </section>
+
+            <section id="cursos" class="tematica">
+                <article id="titCursos" class="titulo">
+                    <i class="fa-solid fa-chalkboard-user iconoTitulo"></i>
+                    <h3>CURSOS, SEMINARIOS Y CAPACITACIONES</h3>
+                    <div class="fleVisibilidad" id="mostrarCursos">
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="fleVisibilidad" id="ocultarCursos">
+                        <i class="fa-solid fa-chevron-up"></i>
+                    </div>
+                </article>
+                <article>
+                    <ul class="datos">
+                        <li>
+                            <p><span class="resaltar">sep-2022 - nov-2022:</span> Como ser un buen CEO</p>
+                        </li>
+                        <li>
+                            <p><span class="resaltar">jul-2022:</span> ABC del CEO</p>
+                        </li>
+                    </ul>
+                </article>
+            </section>
+            <section id="contactar" class="tematica">
+                <article  id="titContactar" class="titulo">
+                    <i class="fa-solid fa-envelope iconoTitulo"></i>
+                    <h3>CONTACTAR</h3>
+                    <div class="fleVisibilidad" id="mostrarContactar">
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="fleVisibilidad" id="ocultarContactar">
+                        <i class="fa-solid fa-chevron-up"></i>
+                    </div>
+                </article>
+                <article>
+                    <form id="formularioContactar">
+                        <label for="nombreCont">Nombre:</label>
+                        <input type="text" name="nombreCont" id="nombreCont" class="cajaFormulario" required placeholder="INGRESE SU NOMBRE"><br>
+
+                        <label for="apellidoCont">Apellido:</label>
+                        <input type="text" name="apellidoCont" id="apellidoCont" class="cajaFormulario" required placeholder="INGRESE SU APELLIDO"><br>
+
+                        <label for="correoElecCont">Correo electrónico</label>
+                        <input type="email" name="correoElecCont" id="correoElecCont" class="cajaFormulario" required placeholder="correo@ejemplo.com"><br>
+
+                        <label for="asuntoCont">Asunto:</label>
+                        <input type="text" name="asuntoCont" id="asuntoCont" class="cajaFormulario" required placeholder="ASUNTO"><br>
+
+                        <textarea name="comentariosCont" id="comentariosCont" class="cajaFormulario" cols="50" rows="8" placeholder="Comentarios adicionales..."></textarea><br>
+                        <input type="button" onclick="alert('Podría ser submit pero lo hice button para mostrar un mensaje de alerta')" id="enviarFormulario" class="cajaFormulario" name="Enviar" value="Enviar">
+                    </form>
+                </article>
+            </section>
+        </main>
+
+        <footer>
+            Agustin Molinari
+            Argentina Programa 4.0
+        </footer>
+    </div>
+    <!-- Inicio del javascript propio, se pone al final para darle tiempo a que la página termine de cargar-->
+    <script src="js/funcionalidad.js"></script>
+
+</body>
+
+</html>
