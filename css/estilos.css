@@ -1,4 +1,11 @@
 
+body{
+    background-color: #d9c9bb;
+    justify-content: center;
+    color: var(--color-texto);
+    margin: 0;
+}
+
 :root{
     font-size: 15px;
     font-family: 'Roboto', 'Open Sans', sans-serif;
@@ -10,22 +17,21 @@
     color: var(--color-texto);
 }
 
-body{
+.fleVisibilidad {
+    margin-top: 18px;
+    margin-right: 45px;
+    float: right;
+    padding: 7px;
+    border-radius: 3px;
+}
+.fleVisibilidad:hover{
     background-color: var(--color-2);
-    justify-content: center;
     color: var(--color-texto);
-    margin: 0;
+    cursor: pointer;
 }
 
-#pagina{
-    display: flexbox;
-    justify-content:center;
-    margin: auto;
-    min-width: 650px;
-    max-width: 65%;
-    padding: 30px;
-    background-color: var(--color-pagina);
-}
+
+
 
 p{
     font-family: 'Open Sans', sans-serif;
@@ -43,7 +49,7 @@ nav{
     justify-content: space-evenly;
     align-items: center ;
     padding: 2.1rem 1rem;
-    background-color: var(--color-2);
+    background-color: #21743778;
 }
 
 nav ul{
@@ -63,6 +69,7 @@ nav ul li a{
     padding: 1rem;
 }
 
+
 #modoVis{
     padding: 1rem;
 }
@@ -71,6 +78,7 @@ nav ul li a{
     background-color: var(--color-1);
     border-radius: 6px;
 }
+
 
 /*Contenedor de la foto de perfil (figure e img)*/
 #perfil{
@@ -81,6 +89,17 @@ nav ul li a{
     height: 100%;
     margin-left: 10px;
 }
+
+#pagina{
+    display: flexbox;
+    justify-content:center;
+    margin: auto;
+    min-width: 650px;
+    max-width: 65%;
+    padding: 30px;
+    background-color: var(--color-pagina);
+}
+
 
 /* figure contenedor de img*/
 #foto{
@@ -93,17 +112,6 @@ nav ul li a{
     min-height: 128px;
     width: 99%;
     height: 99%;
-    
-}
-
-.AsideIzq
-{
-    float: left;
-}
-
-.AsideDer
-{
-    float: right;
 }
 
 /* img contenedor de la imagen de perfil */
@@ -111,33 +119,12 @@ nav ul li a{
     border-radius: 50%;
     width: 128px;
     height: 128px;
+    border-style: solid;
+    border-color: #21743778;
 }
 
-/* div contenedor de los imagenes de redes de contacto*/
-#redes{
-    float: left;
-    width: 80px;
-    height: 200px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-}
 
-/* clase de figure que contiene las img */
-.redesContacto{
-    margin: 16px 0px;
-    display: flex;
-    justify-content: center;
-    
-}
-/* clase contenedora de las img */
-.imgRedes {
-    height: 40px;
-}
-.imgRedes:hover {
-    transform: scale(1.25);
-    transition: 0.5s ease 0.05s;
-}
+
 
 /* div contenedor del nombre y profesion */
 #nombreTitulo{
@@ -161,7 +148,7 @@ nav ul li a{
 
 .tematica{
     clear: both;
-    border-top: 3px solid var(--color-3);
+    border-top: 3px solid #84c39a;
     padding-bottom: 10px;
 }
 
@@ -179,22 +166,11 @@ nav ul li a{
     text-decoration: underline;
 }
 
-.fleVisibilidad {
-    margin-top: 18px;
-    margin-right: 45px;
-    float: right;
-    padding: 7px;
-    border-radius: 3px;
-}
-.fleVisibilidad:hover{
-    background-color: var(--color-2);
-    color: var(--color-texto);
-    cursor: pointer;
-}
+
 
 .titulo {
     padding-bottom: 4em;
-    border-bottom: 1px solid var(--color-3);
+    border-bottom: 1px solid #4c1d461c;
 }
 .titulo h3 {
     float: left;
@@ -208,30 +184,10 @@ nav ul li a{
     display: none;
 }
 
-#formularioContactar{
-    margin-top: 20px;
-}
-#formularioContactar input{
-    margin-bottom: 15px;
-}
-
-.cajaFormulario {
-    color: var(--color-texto);
-    background-color: var(--color-pagina);
-    border: 1px solid var(--color-3);
-    border-radius: 3px;
-}
-
-#enviarFormulario:hover{
-    cursor: pointer;
-    font-weight: bold;
-    transform: scale(1.25);
-    transition: 0.5s ease 0.05s;
-}
 
 footer {
     clear: both;
-    border-top: 1px solid var(--color-3);
+    border-top: 1px #84c39a;
     padding-top: 1em;
     text-align: center;
     margin-top: 10px;
@@ -241,29 +197,27 @@ a{
     color: inherit;
 }
 footer a:hover{
-    color: var(--color-3);
+    color: #84c39a;
     font-weight: bold;
 }
 
-#btnToTop{
-    display: none;
-    position: fixed;
-    right: 30px;
-    bottom: 20px;
-
-    padding: 20px 8px;
-    background-color: var(--color-1);
-    color: var(--color-3);
-    border-radius: 30%;
-    height: 5rem;
-    width: 5rem;
-    font-size: 5rem;
-    text-align: center;
-    vertical-align:text-bottom;
-    cursor: pointer;
+#formularioContactar{
+    margin-top: 20px;
+}
+#formularioContactar input{
+    margin-bottom: 15px;
 }
 
-#btnToTop:hover{
+.cajaFormulario {
+    color: var(--color-texto);
+    background-color: #f4f5ff;
+    border: 1px solid #7c80a9;
+    border-radius: 3px;
+}
+
+#enviarFormulario:hover{
+    cursor: pointer;
+    font-weight: bold;
     transform: scale(1.25);
     transition: 0.5s ease 0.05s;
 }
